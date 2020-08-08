@@ -1,0 +1,45 @@
+<style>
+    th, td {padding: 5px;}
+</style>
+
+<h3> Welcome to Employee Details </h3>
+
+<h4> Local List </h4>
+<table
+style="border-collapse: collapse;"
+border="1">
+    <tr>
+        <th>Index</th>
+        <th>Id.</th>
+        <th>Name</th>
+        <th (click)="onAgeClick()" style="cursor: help;">Age*</th>
+        <th>Address</th>
+    </tr>
+    <tr *ngFor="let employee of employees; index as i">
+        <td>{{i}}</td>
+        <td>{{employee.id}}</td>
+        <td>{{(employee.name | employeeTitle: employee.gender).toUpperCase()}}</td>
+        <td>{{employee.age}}</td>
+        <td>{{employee.address | uppercase}}</td>
+    </tr>
+</table>
+
+<h4> Service List </h4>
+<table
+style="border-collapse: collapse;"
+border="1">
+    <tr>
+        <th>Index</th>
+        <th>Id.</th>
+        <th>Name</th>
+        <th (click)="onAgeClick()" style="cursor: help;">Age*</th>
+        <th>Address</th>
+    </tr>
+    <tr *ngFor="let employee of serviceEmployees; index as i">
+        <td>{{i}}</td>
+        <td>{{employee.id}}</td>
+        <td>{{(employee.name | employeeTitle: employee.gender).toUpperCase()}}</td>
+        <td>{{employee.age}}</td>
+        <td>{{employee.address | uppercase}}</td>
+    </tr>
+</table>

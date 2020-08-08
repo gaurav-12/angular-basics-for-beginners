@@ -1,0 +1,64 @@
+<!-- <link rel="stylesheet" href="./hello.component.css"/> -->
+
+<!-- <h1 style="color: goldenrod;">
+    Hello {{name}}!
+</h1> -->
+
+<!-- <h1 style="color: goldenrod;">
+    Hello {{name}}!
+</h1> -->
+
+<style>
+    h1 {
+        color: black;
+    }
+
+    #userNameId,
+    #colorNameId {
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    button {
+        padding: 10px;
+        border-radius: 5;
+        font-size: 15px;
+    }
+
+    #colorSpan {
+        padding: 10px;
+        color: white;
+
+    }
+</style>
+
+<h1>Hello {{name == ""? "Indore" : name}}!</h1>
+
+<label for="userName">
+    Enter your name
+</label> <br>
+<input type="text" name="userName" id="userNameId" autofocus (keyup.enter)="greet()"
+    (input)="onInput($event, 'name')" />
+
+<br> <br>
+
+<button (click)="greet()">
+    Greet!
+</button>
+
+<br> <br> <br> <br>
+
+<label for="userName">
+    So, Red, Blue, Green, or Yellow?
+</label> <br>
+<input type="text" name="colorName" id="colorNameId" (input)="onInput($event, 'color')" />
+<div style="display: inline-block; margin-left: 20px;"
+[ngSwitch]="color.toUpperCase()">
+    <span id="colorSpan" *ngSwitchCase="'RED'" style="background-color: red;"></span>
+    <span id="colorSpan" *ngSwitchCase="'BLUE'" style="background-color: blue;"></span>
+    <span id="colorSpan" *ngSwitchCase="'GREEN'" style="background-color: green;"></span>
+    <span id="colorSpan" *ngSwitchCase="'YELLOW'" style="background-color: yellow;"></span>
+    <span id="colorSpan" *ngSwitchDefault style="border: 2px solid black;"></span>
+</div>

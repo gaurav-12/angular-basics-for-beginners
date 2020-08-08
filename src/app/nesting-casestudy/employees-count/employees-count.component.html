@@ -1,0 +1,12 @@
+<div id="container">
+    <span class="filter">Show : </span>
+
+    <input name="filters" type="radio" value="all" (change)="onCountRadioChanged($event)" checked/>
+    <span class="filter">{{"All(" + allCount + ")"}}</span>
+    |
+    <input name="filters" type="radio" value="male" (change)="onCountRadioChanged($event)">
+    <span class="filter">{{"Male(" + maleCount + ")"}}</span>
+    |
+    <input name="filters" type="radio" value="female" (change)="onCountRadioChanged($event)">
+    <span class="filter">{{"Female(" + femaleCount + ")"}}</span>
+</div>

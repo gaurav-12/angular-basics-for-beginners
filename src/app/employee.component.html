@@ -1,0 +1,45 @@
+<h1> Welcome to Employee Details </h1>
+<h3> Following are the details of {{getFullName()}}</h3>
+
+<table style="border-collapse: collapse; background-color: lightblue;" border="1">
+    <tr>
+        <td colspan="2">
+            <img src="{{employee.image}}" height="150" alt="{{employee.firstName}}"
+            bind-hidden="imageHidden"/>
+        </td>
+    </tr>
+
+    <tr *ngIf="detailsShowing">
+        <th align="left">Id.</th>
+        <td>{{employee.id}}</td>
+    </tr>
+
+    <tr>
+        <th align="left">First Name.</th>
+        <td>{{employee.firstName.toUpperCase()}}</td>
+    </tr>
+
+    <tr>
+        <th align="left">Last Name</th>
+        <td>{{employee.lastName.toUpperCase()}}</td>
+    </tr>
+
+    <tr *ngIf="detailsShowing">
+        <th align="left">Age</th>
+        <td>{{employee.age}}</td>
+    </tr>
+
+    <tr *ngIf="detailsShowing">
+        <th align="left">Address</th>
+        <td>{{employee.address}}</td>
+    </tr>
+</table>
+
+<br>
+<button (click)="toggleImage()" id="hideImageId">
+    Hide Image!
+</button>
+&nbsp;
+<button (click)="toggleDetails()" id="hideDetailsId">
+    Hide Details!
+</button>
