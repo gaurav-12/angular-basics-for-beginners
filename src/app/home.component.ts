@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'local-image',
   template: `
   <h2>Welcome to Angular!</h2>
-  <img src="assets/welcome.jpg" height="200"/>
+  <img src="https://cdn.jsdelivr.net/gh/gaurav-12/angular-basics-for-beginners@master/src/assets/welcome.jpg" height="200"/>
   `,
   styleUrls: ['./app.component.css']
 })
