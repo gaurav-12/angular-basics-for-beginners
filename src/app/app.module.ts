@@ -7,7 +7,6 @@ import { EmployeeTitlePipe } from './employee-title.pipe';
 import { NestingChild } from './nesting-child.component';
 import { EmpServiceService } from './emp-service.service';
 import { EmployeesCountComponent } from './nesting-casestudy/employees-count/employees-count.component';
-import { EmployeesListComponent } from './nesting-casestudy/employees-list/employees-list.component';
 
 @NgModule({
   declarations: [

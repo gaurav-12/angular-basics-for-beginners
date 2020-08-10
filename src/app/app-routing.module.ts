@@ -9,6 +9,10 @@ import { PageNotFound } from './page-not-found.component';
 import { HomeComponent } from './home.component';
 import { NestingExample } from './nesting.component';
 import { EmployeesListComponent } from './nesting-casestudy/employees-list/employees-list.component';
+import { DepartmentComponent } from './routing-casestudy/department/department.component';
+import { DepartmentDetailsComponent } from './routing-casestudy/department-details/department-details.component';
+import { DepartmentsListComponent } from './routing-casestudy/departments-list/departments-list.component';
+import { RoutingEmployeesListComponent } from './routing-casestudy/routing-employees-list/routing-employees-list.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -21,6 +25,13 @@ const routes: Routes = [
   {path: 'selector_use', component: SelectorUseComponent},
   {path: 'nested', component: NestingExample},
   {path: 'nested_casestudy', component: EmployeesListComponent},
+
+  {path: 'routing_casestudy', component: DepartmentComponent, children: [
+    {path: 'departments', component: DepartmentsListComponent},
+    {path: '', redirectTo: 'departments', pathMatch: 'full'},
+    {path: 'departments/:id', component: DepartmentDetailsComponent},
+    {path: 'employees', component: RoutingEmployeesListComponent}
+  ]},
 
   {path: '**', component: PageNotFound} // 404 Page
 ];
@@ -39,5 +50,9 @@ export const routingComponents = [
   PageNotFound,
   HomeComponent,
   NestingExample,
-  EmployeesListComponent
+  EmployeesListComponent,
+  DepartmentComponent,
+  DepartmentDetailsComponent,
+  DepartmentsListComponent,
+  RoutingEmployeesListComponent
 ];

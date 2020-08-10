@@ -1,0 +1,5 @@
+<ul *ngFor="let department of departments">
+	<li (click)="onSelect(department)">
+		<span>{{department.name}}</span>
+	</li>
+</ul>
