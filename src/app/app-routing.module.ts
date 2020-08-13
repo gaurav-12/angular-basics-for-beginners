@@ -22,6 +22,7 @@ import { DepartmentComponent } from './routing-casestudy/department/department.c
 import { DepartmentDetailsComponent } from './routing-casestudy/department-details/department-details.component';
 import { DepartmentsListComponent } from './routing-casestudy/departments-list/departments-list.component';
 import { RoutingEmployeesListComponent } from './routing-casestudy/routing-employees-list/routing-employees-list.component';
+import { EmployeeFormComponent } from './form/employee-form/employee-form.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -41,6 +42,8 @@ const routes: Routes = [
     {path: 'departments/:id', component: DepartmentDetailsComponent},
     {path: 'employees', component: RoutingEmployeesListComponent}
   ]},
+
+  {path: 'form', component: EmployeeFormComponent},
 
   {path: '**', component: PageNotFound} // 404 Page
 ];

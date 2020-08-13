@@ -7,6 +7,7 @@ import { EmployeeTitlePipe } from './pipes/employee-title.pipe';
 import { NestingChild } from './nesting/nesting-child.component';
 import { EmpServiceService } from './services/emp-service.service';
 import { EmployeesCountComponent } from './nesting-casestudy/employees-count/employees-count.component';
+import { EmployeeFormService } from './services/employee-form.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { EmployeesCountComponent } from './nesting-casestudy/employees-count/emp
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [EmpServiceService],
+  providers: [EmpServiceService, EmployeeFormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

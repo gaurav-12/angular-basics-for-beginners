@@ -1,0 +1,20 @@
+<h3> Employee Form </h3>
+
+<form #employeeForm="ngModel" (ngSubmit)="onSubmit(employeeForm)">
+  
+  <input type="hidden" #name="ngModel" name="_id"
+  [(ngModel)]="employeeService.selectedEmployee._id"/>
+
+	<label for="userName">
+    Enter your name
+  </label> <br>
+	<input type="text" class="field" #name="ngModel" name="name"
+  [(ngModel)]="employeeService.selectedEmployee.name"/>
+
+  <label for="userName">
+    Enter your name
+  </label> <br>
+	<input type="text" class="field" #name="ngModel" name="position"
+  [(ngModel)]="employeeService.selectedEmployee.position"/>
+
+</form>
