@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   <h3>Page not found...</h3>
   <img src="https://cdn.jsdelivr.net/gh/gaurav-12/angular-basics-for-beginners@master/src/assets/404.jpg" width="400"/>
   `,
-  styleUrls: ['./app.component.css']
+  styleUrls: ['../app.component.css']
 })
 export class PageNotFound implements OnInit {
 

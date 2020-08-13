@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'emp-details',
   templateUrl: './employee.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['../../app.component.css']
 })
 export class EmployeeComponent {
   imageHidden = false;

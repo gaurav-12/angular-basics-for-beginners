@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   <h3> Following text comes from parent component {{todayDate}} </h3>
   <button on-click="fireEvent()" > Send to Parent! </button>
   `,
-  styleUrls: ['./app.component.css']
+  styleUrls: ['../app.component.css']
 })
 export class NestingChild {
   @Input('date') public todayDate;

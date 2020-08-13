@@ -1,14 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { EmployeeComponent } from './employee.component';
-import { EmployeesComponent } from './employees.component';
-import { HelloComponent } from './hello.component';
-import { LocalImageComponent } from './local-image.component';
-import { SelectorUseComponent } from './selectoruse.component';
-import { PageNotFound } from './page-not-found.component';
-import { HomeComponent } from './home.component';
-import { NestingExample } from './nesting.component';
+
+import { EmployeeComponent } from './employee/component/employee.component';
+
+import { EmployeesComponent } from './employees/component/employees.component';
+
+import { HelloComponent } from './hello/component/hello.component';
+
+import { LocalImageComponent } from './local-image/local-image.component';
+
+import { SelectorUseComponent } from './selector-use/component/selectoruse.component';
+
+import { PageNotFound } from './404/page-not-found.component';
+import { HomeComponent } from './home/home.component';
+
+import { NestingExample } from './nesting/nesting.component';
+
 import { EmployeesListComponent } from './nesting-casestudy/employees-list/employees-list.component';
+
 import { DepartmentComponent } from './routing-casestudy/department/department.component';
 import { DepartmentDetailsComponent } from './routing-casestudy/department-details/department-details.component';
 import { DepartmentsListComponent } from './routing-casestudy/departments-list/departments-list.component';

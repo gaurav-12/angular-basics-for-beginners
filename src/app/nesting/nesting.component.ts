@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   <nesting-child date={{todayDate}} (childEvent)="fromChild=$event"></nesting-child>
   <h3> Here is something from Child "{{fromChild}}" </h3>
   `,
-  styleUrls: ['./app.component.css']
+  styleUrls: ['../app.component.css']
 })
 export class NestingExample {
   todayDate = new Date();
