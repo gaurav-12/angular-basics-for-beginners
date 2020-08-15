@@ -3,7 +3,7 @@ import { Employee } from '../form/model/employee.model';
 
 @Injectable()
 export class EmployeeFormService {
-  selectedEmployee: Employee = null;
+  selectedEmployee: Employee = new Employee();
   employees: Employee[];
 
   constructor() { }

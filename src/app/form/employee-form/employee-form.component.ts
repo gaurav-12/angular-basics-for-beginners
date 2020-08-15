@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeFormService } from '../../services/employee-form.service';
-import { NgModel } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-employee-form',
@@ -15,8 +15,12 @@ export class EmployeeFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit = (employeeForm: NgModel) => {
-    console.log(employeeForm.viewModel);
+  onSubmit = (employeeForm?: NgForm) => {
+    console.log(employeeForm.value);
+  }
+
+  resetForm = (employeeForm?: NgForm) => {
+    employeeForm.resetForm();
   }
 
 }

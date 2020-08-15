@@ -8,18 +8,23 @@ import { NestingChild } from './nesting/nesting-child.component';
 import { EmpServiceService } from './services/emp-service.service';
 import { EmployeesCountComponent } from './nesting-casestudy/employees-count/employees-count.component';
 import { EmployeeFormService } from './services/employee-form.service';
+import { EmployeeFormComponent } from './form/employee-form/employee-form.component';
+
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
+    EmployeeFormComponent,
     NestingChild,
     EmployeeTitlePipe,
     EmployeesCountComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [EmpServiceService, EmployeeFormService],
   bootstrap: [AppComponent]

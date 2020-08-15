@@ -1,20 +1,40 @@
 <h3> Employee Form </h3>
 
-<form #employeeForm="ngModel" (ngSubmit)="onSubmit(employeeForm)">
-  
-  <input type="hidden" #name="ngModel" name="_id"
+<form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+
+	<input type="hidden" #name="ngModel" name="_id"
   [(ngModel)]="employeeService.selectedEmployee._id"/>
 
-	<label for="userName">
-    Enter your name
+	<label for="empName">
+    Full Name
   </label> <br>
-	<input type="text" class="field" #name="ngModel" name="name"
+	<input type="text" class="field" #name="ngModel" name="empName"
   [(ngModel)]="employeeService.selectedEmployee.name"/>
 
-  <label for="userName">
-    Enter your name
+	<br> <br>
+
+	<label for="empPosition">
+    Position
   </label> <br>
-	<input type="text" class="field" #name="ngModel" name="position"
+	<input type="text" class="field" #name="ngModel" name="empPosition"
   [(ngModel)]="employeeService.selectedEmployee.position"/>
+
+	<br> <br>
+
+	<label for="empSalary">
+    Salary (INR)
+  </label> <br>
+	<input type="text" class="field" #name="ngModel" name="empSalary"
+  [(ngModel)]="employeeService.selectedEmployee.salary"/>
+
+	<br> <br>
+
+	<button (click)="resetForm(employeeForm)">
+    Reset
+  </button>
+	&nbsp;
+	<button type="submit">
+    Submit
+  </button>
 
 </form>
