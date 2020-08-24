@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { EmployeeComponent } from './employee/component/employee.component';
 
-import { EmployeesComponent } from './employees/component/employees.component';
+import { EmployeesComponent } from './employees/emp-details-component/employees.component';
 
 import { HelloComponent } from './hello/component/hello.component';
 
@@ -23,6 +23,7 @@ import { DepartmentDetailsComponent } from './routing-casestudy/department-detai
 import { DepartmentsListComponent } from './routing-casestudy/departments-list/departments-list.component';
 import { RoutingEmployeesListComponent } from './routing-casestudy/routing-employees-list/routing-employees-list.component';
 import { EmployeeFormComponent } from './form/employee-form/employee-form.component';
+import { EmpServiceDetailsComponent } from './employees/emp-service-details/emp-service-details.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -30,6 +31,7 @@ const routes: Routes = [
 
   {path: 'emp_details', component: EmployeeComponent},
   {path: 'emps_details', component: EmployeesComponent},
+  {path: 'emps_service_details', component: EmpServiceDetailsComponent},
   {path: 'hello', component: HelloComponent},
   {path: 'local_image', component: LocalImageComponent},
   {path: 'selector_use', component: SelectorUseComponent},
@@ -66,5 +68,6 @@ export const routingComponents = [
   DepartmentComponent,
   DepartmentDetailsComponent,
   DepartmentsListComponent,
-  RoutingEmployeesListComponent
+  RoutingEmployeesListComponent,
+  EmpServiceDetailsComponent
 ];

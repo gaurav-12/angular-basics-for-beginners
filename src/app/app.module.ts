@@ -11,6 +11,7 @@ import { EmployeeFormService } from './services/employee-form.service';
 import { EmployeeFormComponent } from './form/employee-form/employee-form.component';
 
 import { FormsModule } from '@angular/forms';
+import { EmpServiceDetailsComponent } from './employees/emp-service-details/emp-service-details.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     NestingChild,
     EmployeeTitlePipe,
     EmployeesCountComponent,
+    EmpServiceDetailsComponent,
   ],
   imports: [
     BrowserModule,

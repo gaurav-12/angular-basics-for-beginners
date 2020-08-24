@@ -6,14 +6,15 @@ import { EmpServiceService } from '../../services/emp-service.service';
   templateUrl: './employees.component.html',
   styleUrls: ['../../app.component.css']
 })
-export class EmployeesComponent implements OnInit{
-  constructor (private servEmployees : EmpServiceService) { }
+export class EmployeesComponent {
+  constructor (public servEmployees : EmpServiceService) { }
 
-  serviceEmployees = [];
+  changeEmpAge = (employee, index) => {
+    const newAge = prompt('Enter new age of ' + employee.name);
 
-  ngOnInit(): void {
-    this.serviceEmployees = this.servEmployees.getEmployeesList();
+    this.servEmployees.empList[index].age = parseInt(newAge);
   }
+  
   onAgeClick = () => {
     alert('The age is assumed by the developer, as each movie or series shows different time')
   }

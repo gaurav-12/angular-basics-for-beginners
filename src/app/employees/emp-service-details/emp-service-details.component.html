@@ -1,0 +1,18 @@
+<h4> Service List </h4>
+<p> The table below should reflect the updated age from Employees Component tab </p>
+<table style="border-collapse: collapse;" border="1">
+	<tr>
+		<th>Index</th>
+		<th>Id.</th>
+		<th>Name</th>
+		<th>Age*</th>
+		<th>Address</th>
+	</tr>
+	<tr *ngFor="let employee of servEmployees.getEmployeesList(); index as i">
+		<td>{{i}}</td>
+		<td>{{employee.id}}</td>
+		<td>{{(employee.name | employeeTitle: employee.gender).toUpperCase()}}</td>
+		<td (click)="changeEmpAge(employee, i)" style="cursor: pointer" title="Update age">{{employee.age}}</td>
+		<td>{{employee.address | uppercase}}</td>
+	</tr>
+</table>
